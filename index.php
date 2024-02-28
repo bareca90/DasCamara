@@ -30,7 +30,7 @@
         </div>
         <div id="container">
             <?php 
-                $sql="SELECT top 1 * from Vi_Datos_Embarque_Camara";
+                $sql="SELECT top 1 * from Vi_Datos_Embarque_Camara Order By FechaDatos";
                 $result=sqlsrv_query($con,$sql);
                 while($muestra=sqlsrv_fetch_array($result)){
                     $fechaactual=$muestra['FechaActual'];
@@ -42,10 +42,8 @@
             <div class="kpi-card orange">
                 <span class="card-value">Fecha</span>
                 <span class="card-text"><?php 
-                        
-                       //$Dateactual = $fechaactual->format('d/m/Y');
-                        echo date('d/m/Y');
-                        //echo $Dateactual;
+                       echo date('d/m/Y');
+                       
                         
                         
                         ?> 
@@ -93,7 +91,7 @@
             </thead>
             <tbody>
                 <?php 
-                    $sql="SELECT * from Vi_Datos_Embarque_Camara";
+                    $sql="SELECT * from Vi_Datos_Embarque_Camara Order By FechaDatos";
                     $result=sqlsrv_query($con,$sql);
                     while($mostrar=sqlsrv_fetch_array($result)){
                 ?>
