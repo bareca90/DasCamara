@@ -91,7 +91,7 @@
             </thead>
             <tbody>
                 <?php 
-                    $sql="SELECT * from Vi_Datos_Embarque_Camara Order By FechaDatos";
+                    $sql="SELECT * from Vi_Datos_Embarque_Camara Order By FechaDatos,Hora";
                     $result=sqlsrv_query($con,$sql);
                     while($mostrar=sqlsrv_fetch_array($result)){
                 ?>
