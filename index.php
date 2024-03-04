@@ -30,6 +30,9 @@
         </div>
         <div id="container">
             <?php 
+                $aguaje = '';
+                $supervisor = '';
+                $turno = '';
                 $sql="SELECT top 1 * from Vi_Datos_Embarque_Camara Order By FechaDatos";
                 $result=sqlsrv_query($con,$sql);
                 while($muestra=sqlsrv_fetch_array($result)){
