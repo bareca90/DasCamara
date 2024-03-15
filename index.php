@@ -81,8 +81,8 @@
         <table>
             <thead>
                 <tr>
-                    <th class="ancho_celdas_normales"> Fecha De Cita </th>
-                    <th class="ancho_celdas_normales"> Hora Cita </th>
+                    <th class="ancho_celdas_normales"> Fec. Hra. Cita </th>
+                    <th class="ancho_celdas_normales"> Fec. Hra. Real </th>
                     <th class="ancho_celdas_normales"> Referencia </th>
                     <th class="ancho_celdas_normales"> Cliente </th>
                     <th class="ancho_celdas_normales"> Liquidador </th>
@@ -102,11 +102,13 @@
                 <tr>
                     
                     <td><?php 
-                            $Date = $mostrar['FechaDatos']->format('d/m/Y');
-                            
-                            // $Date === null ? '' :  $Date->format('d/m/Y');
-                            echo $Date; ?></td>
-                    <td><?php echo $mostrar['Hora'] ?></td>
+                            /* $Date = $mostrar['FechaDatos']->format('d/m/Y'); */
+                            /* echo $Date;  */
+                            echo $mostrar['Fec_Cita_Char']
+                        ?>
+                    </td>
+                    <td><?php echo $mostrar['Fec_Real_Char'] ?></td>
+                    
                     <td><?php echo $mostrar['Referencia'] ?></td>
                     <td><?php echo $mostrar['Cliente'] ?></td>
                     <td><?php echo $mostrar['Liquidador'] ?></td>
