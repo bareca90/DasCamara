@@ -81,11 +81,12 @@
         <table>
             <thead>
                 <tr>
-                    <th class="ancho_celdas_normales"> Fec. Hra. Cita </th>
-                    <th class="ancho_celdas_normales"> Fec. Hra. Real </th>
-                    <th class="ancho_celdas_normales"> Referencia </th>
-                    <th class="ancho_celdas_normales"> Cliente </th>
-                    <th class="ancho_celdas_normales"> Liquidador </th>
+                    <th class="ancho_celdas_normales"> Fec. Hra. Cita   </th>
+                    <th class="ancho_celdas_normales">                  </th>
+                    <th class="ancho_celdas_normales"> Fec. Hra. Real   </th>
+                    <th class="ancho_celdas_normales"> Referencia       </th>
+                    <th class="ancho_celdas_normales"> Cliente          </th>
+                    <th class="ancho_celdas_normales"> Liquidador       </th>
                     <th class="ancho_celdas_normales"> Muelle </th>
                     <th class="ancho_celdas_normales"> CutOff </th>
                     <!--<th class="ancho_celdas_normales"> Embarcadas </th>-->
@@ -107,8 +108,36 @@
                             echo $mostrar['Fec_Cita_Char']
                         ?>
                     </td>
+                    <td>
+                        <?php 
+                            $minutos_diferencia = $mostrar['Minutos_Dif'];
+                            if($minutos_diferencia<=0 ) //Verde
+                            {
+                                echo "
+                                    <div  class='btn btn-success btn-circle btn-circle-sm m-1'>
+                                    </div>
+                                ";
+
+                            }
+                            if($minutos_diferencia>0 && $minutos_diferencia<=30) //Amarillo 
+                            {
+                                echo "
+                                    <div  class='btn btn-warning btn-circle btn-circle-sm m-1'>
+                                    </div>
+                                ";
+                            }
+                            if($minutos_diferencia>30 ) //Verde
+                            {
+                                echo "
+                                    <div  class='btn btn-danger btn-circle btn-circle-sm m-1'>
+                                    </div>
+                                ";
+
+                            }
+                        ?>
+                    </td>
+
                     <td><?php echo $mostrar['Fec_Real_Char'] ?></td>
-                    
                     <td><?php echo $mostrar['Referencia'] ?></td>
                     <td><?php echo $mostrar['Cliente'] ?></td>
                     <td><?php echo $mostrar['Liquidador'] ?></td>

@@ -82,7 +82,8 @@ blockquote {
   text-align: center;
 }
 .ancho_celdas_normales{
-  width: 9%;
+  /* width: 9%; */
+  width: auto;
 }
 .ancho_celdas_barra{
   width: 37%;
@@ -237,4 +238,59 @@ blockquote {
 
 .skill6 .skill-count6 {
   right: 0;
+}
+/*--- Indicadores ---*/
+.btn-circle {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0;
+  border-radius: 100%;
+}
+
+.btn-circle i {
+  position: relative;
+  top: -1px;
+}
+
+.btn-circle-sm {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 0.9rem;
+}
+
+.btn-circle-lg {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 1.1rem;
+}
+
+.btn-circle-xl {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.3rem;
+}
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.btn-warning {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+.btn-danger{
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+.btn-blue{
+  color: #fff;
+  background-color: #0000FF;
+  border-color: #0000FF;
 }
