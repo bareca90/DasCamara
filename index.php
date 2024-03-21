@@ -89,6 +89,8 @@
                     <th class="ancho_celdas_normales"> Liquidador       </th>
                     <th class="ancho_celdas_normales"> Muelle </th>
                     <th class="ancho_celdas_normales"> CutOff </th>
+                    <th class="ancho_celdas_normales"> Fec. Est. Term. </th>
+                    <th class="ancho_celdas_normales">                  </th>
                     <!--<th class="ancho_celdas_normales"> Embarcadas </th>-->
                     <th class="ancho_celdas_barra"> Avance </th>
                 </tr>
@@ -143,6 +145,35 @@
                     <td><?php echo $mostrar['Liquidador'] ?></td>
                     <td><?php echo $mostrar['Muelle'] ?></td>
                     <td><?php echo $mostrar['Cutoff'] ?></td>
+                    <td><?php echo $mostrar['Fec_Est_Term_Chr'] ?></td>
+                    <td>
+                        <?php 
+                            $minu_dif_estimada = $mostrar['Dif_Min_Hra_Estima'];
+                            if($minu_dif_estimada<=0 ) //Verde
+                            {
+                                echo "
+                                    <div  class='btn btn-success btn-circle btn-circle-sm m-1'>
+                                    </div>
+                                ";
+
+                            }
+                            if($minu_dif_estimada>0 && $minu_dif_estimada<=30) //Amarillo 
+                            {
+                                echo "
+                                    <div  class='btn btn-warning btn-circle btn-circle-sm m-1'>
+                                    </div>
+                                ";
+                            }
+                            if($minu_dif_estimada>30 ) //Verde
+                            {
+                                echo "
+                                    <div  class='btn btn-danger btn-circle btn-circle-sm m-1'>
+                                    </div>
+                                ";
+
+                            }
+                        ?>
+                    </td>
                     <!--<td></*?php echo $mostrar['Embarcadas'] ?>*/</td>-->
                     <td>
                         <?php 
